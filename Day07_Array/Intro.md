@@ -7,6 +7,7 @@ An array is a collection of elements of the same data type stored in contiguous 
 ## Array Declaration and Initialization
 
 ### Syntax
+
 ```java
 // Declaration
 dataType[] arrayName;
@@ -17,6 +18,7 @@ dataType[] arrayName = {element1, element2, element3};
 ```
 
 ### Example
+
 ```java
 // Integer array
 int[] numbers = new int[5];
@@ -32,6 +34,7 @@ double[] prices = new double[3];
 ## Common Array Methods
 
 ### 1. Accessing Elements
+
 ```java
 int[] arr = {10, 20, 30, 40};
 System.out.println(arr[0]); // Output: 10
@@ -39,6 +42,7 @@ System.out.println(arr.length); // Output: 4
 ```
 
 ### 2. Iterating Through Arrays
+
 ```java
 int[] arr = {1, 2, 3, 4, 5};
 
@@ -54,6 +58,7 @@ for (int num : arr) {
 ```
 
 ### 3. Array Sorting
+
 ```java
 import java.util.Arrays;
 
@@ -63,6 +68,7 @@ System.out.println(Arrays.toString(arr)); // [1, 2, 5, 8, 9]
 ```
 
 ### 4. Finding an Element
+
 ```java
 import java.util.Arrays;
 
@@ -72,13 +78,16 @@ System.out.println(index); // Output: 2
 ```
 
 ### 5. Copying Arrays
+
 ```java
 int[] original = {1, 2, 3};
 int[] copy = Arrays.copyOf(original, original.length);
 ```
+
 ## Array Utility Functions
 
 ### 1. Arrays.fill()
+
 ```java
 import java.util.Arrays;
 
@@ -88,6 +97,7 @@ System.out.println(Arrays.toString(arr)); // [10, 10, 10, 10, 10]
 ```
 
 ### 2. Arrays.equals()
+
 ```java
 import java.util.Arrays;
 
@@ -97,6 +107,7 @@ System.out.println(Arrays.equals(arr1, arr2)); // true
 ```
 
 ### 3. Arrays.toString()
+
 ```java
 import java.util.Arrays;
 
@@ -105,15 +116,18 @@ System.out.println(Arrays.toString(arr)); // [5, 10, 15, 20]
 ```
 
 ### 4. Arrays.asList()
+
 ```java
 import java.util.Arrays;
 
 String[] arr = {"a", "b", "c"};
 List<String> list = Arrays.asList(arr);
 ```
+
 ## Passing Arrays to Functions
 
 ### Syntax
+
 ```java
 // Function that accepts an array
 returnType functionName(dataType[] arrayName) {
@@ -122,6 +136,7 @@ returnType functionName(dataType[] arrayName) {
 ```
 
 ### Example
+
 ```java
 public static void printArray(int[] arr) {
     for (int num : arr) {
@@ -144,11 +159,13 @@ int total = sumArray(numbers); // Returns 100
 ```
 
 ### Important Notes
+
 - Arrays are passed by reference, so modifications inside the function affect the original array
 - You can pass arrays of any size to a function
 - Array parameters can be used with variable-length argument lists (varargs)
 
 ### Varargs Example
+
 ```java
 public static int sum(int... numbers) {
     int total = 0;
@@ -161,4 +178,48 @@ public static int sum(int... numbers) {
 // Can pass any number of arguments
 System.out.println(sum(5, 10, 15));        // Output: 30
 System.out.println(sum(1, 2, 3, 4, 5));   // Output: 15
+```
+
+# What is Two Dimensional Array (2D Array) in Java
+
+A Two Dimensional Array in Java is a collection of 1D Array. It consists of rows and columns and looks like a table. A 2D array is also known as Matrix.
+
+## Declaration Syntax of a Two Dimensional Array in Java
+
+```
+datatype variable_name[][] = new datatype[row_size][column_size];
+
+datatype[][] variable_name = new datatype[row_size][column_size];
+```
+
+Here row_size is the number of rows we want to create in a 2D array and, column_size is the number of columns in each row.
+
+## Declaration and Initialization of a Two Dimensional Array in Java
+
+### Example 1
+
+```
+int a[][]= new int[][] {{1,2,3}, {4,5,6}, {7,8,9}};
+```
+
+### Example 2
+
+```
+int a[][]= {{15,27,36}, {41,52,64}, {79,87,93}}
+```
+
+### Example 3
+
+All cell contains the value 0
+
+```
+int a[][]= new int[3][3];
+```
+
+# Access Numbers in a Two Dimensional Array
+
+We can access any number stored in a 2D array using the following syntax.
+
+```
+array_name[row_index][column_index]
 ```
