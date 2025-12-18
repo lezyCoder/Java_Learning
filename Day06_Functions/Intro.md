@@ -79,3 +79,4 @@ public class Example
 In the above program, variable p, r and t in function simpleinterest() are used to receive inputs from the main program, so these variables are known as Formal Argument.
 
 The variables principal, rate and time used in the main program to provide inputs to the function simpleinterest() are known as Actual Arguments because they provide the actual inputs to the function simpleinterest().
+
